@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: extramaths
+Version: 0.0.1
+Summary: A Python package that simplifies complex equations.
+Home-page: https://github.com/WhenLifeHandsYouLemons/extramaths-python-package
+Author: Sooraj Sannabhadti
+Author-email: developer.soorajs@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/WhenLifeHandsYouLemons/extramaths-python-package/issues
+Description: # extramaths
+         A custom Python package that simplifies complex equations.
+        
+Keywords: equations math beginner
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
