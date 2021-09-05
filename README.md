@@ -1,4 +1,4 @@
-# extramaths
+# extramaths 0.0.1
 
 A custom Python package that simplifies equations. Right now it only does quadratics and 2D shape areas, soon I'll add more.
 
