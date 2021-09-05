@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="extramaths",
-    version="0.0.1",
+    version="0.1.0",
     author="Sooraj Sannabhadti",
     author_email="developer.soorajs@gmail.com",
-    description="A Python package that simplifies complex equations.",
+    description="A Python package that simplifies equations.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/WhenLifeHandsYouLemons/extramaths-python-package",

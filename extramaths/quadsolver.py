@@ -1,5 +1,6 @@
 from math import sqrt
 
+# Quadratic solver
 def quadraticsolver(a, b, c):
     try:
         x1 = ((b * -1) + sqrt((b * b) - (4 * a * c))) / (2 * a)
