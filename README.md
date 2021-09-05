@@ -1,6 +1,6 @@
 # extramaths 0.1.0
 
-A custom Python package that simplifies equations. Right now it only does quadratics and 2D shape areas, soon I'll add more.
+A Python package that simplifies equations. Right now it only does quadratics and 2D shape areas, soon I'll add more.
 
 Go to https://pypi.org/project/extramaths/ to install the package.
 
