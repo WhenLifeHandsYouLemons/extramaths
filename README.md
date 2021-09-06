@@ -1,85 +1,31 @@
-# extramaths 0.1.0
+# How To Create & Upload A Package
 
-A Python package that simplifies equations. Right now it only does quadratics and 2D shape areas, soon I'll add more.
+## Installation
 
-Go to https://pypi.org/project/extramaths/ to install the package.
-
-
-## Help Page
-
-This help page shows examples of how all the functions work, for a more in-depth help page, please refer to https://github.com/WhenLifeHandsYouLemons/extramaths/wiki/Help.
-
-### For Quadratics
-
-~~~
-from extramaths import quadsolver
+~~~bash
+python -m pip install --user --upgrade setuptools wheel
 ~~~
 
-~~~
-value1, value2 = quadsolver.quadraticsolver(a, b, c)
-
-print(value1)
-print(value2)
+~~~bash
+python -m pip install --user --upgrade twine
 ~~~
 
-### For Areas of 2D Shapes
+## Upload
 
-~~~
-from extramaths import areasolver
-~~~
-
-#### Square
-
-~~~
-area_of_square = areasolver.area_square(length)
-
-print(area_of_square)
+~~~bash
+cd [insert full path to where the setup.py file is located]
 ~~~
 
-#### Rectangle
-
-~~~
-area_of_rectangle = areasolver.area_rect(height, width)
-
-print(area_of_rectangle)
+~~~bash
+python setup.py sdist bdist_wheel
 ~~~
 
-#### Right-Angled Triangle
+This previous step should have created a dist folder.
 
-~~~
-area_of_right_angled_triangle = areasolver.area_right_angle_tri(base, height)
-
-print(area_of_right_angled_triangle)
+~~~bash
+python -m twine upload dist/*
 ~~~
 
-#### Non Right-Angled Triangle
+Type in your PyPi username and password at this point.
 
-~~~
-area_of_non_right_angled_triangle = areasolver.area_non_right_angle_tri(a, b, C)
-
-print(area_of_non_right_angled_triangle)
-~~~
-
-#### Rhombus
-
-~~~
-area_of_rhombus = areasolver.area_rhombus(D, d)
-
-print(area_of_rhombus)
-~~~
-
-#### Trapezoid
-
-~~~
-area_of_trapezoid = areasolver.area_trapezoid(a, b, height)
-
-print(area_of_trapezoid)
-~~~
-
-#### Circle
-
-~~~
-area_of_circle = areasolver.area_circle(r)
-
-print(area_of_circle)
-~~~
+Done!
