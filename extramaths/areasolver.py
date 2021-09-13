@@ -1,3 +1,4 @@
+# Imports
 from math import pi, sin
 
 # Area of a square
