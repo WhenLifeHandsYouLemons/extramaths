@@ -3,13 +3,13 @@ import math
 
 # Trigonometry solver
 def right_angle_trig(hypotenuse, opposite, adjacent, angle):
-	if hypotenuse == 0:
+	if hypotenuse == None:
 	    print(hypotenuse)
-	if opposite == 0:
+	if opposite == None:
 	    print(opposite)
-	if adjacent == 0:
+	if adjacent == None:
 	    print(adjacent)
-	if angle == 0:
+	if angle == None:
 	    print(angle)
 
 right_angle_trig(43, 23, 45, 4)
