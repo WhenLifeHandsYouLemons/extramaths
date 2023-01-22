@@ -4,6 +4,8 @@ A Python package that simplifies equations. Right now it only does quadratics an
 
 Go to [https://pypi.org/project/extramaths/](https://pypi.org/project/extramaths/ "Download page") to install the package.
 
+[![Upload Python Package](https://github.com/WhenLifeHandsYouLemons/extramaths/actions/workflows/python-publish.yml/badge.svg)](https://github.com/WhenLifeHandsYouLemons/extramaths/actions/workflows/python-publish.yml)
+
 ## Help Page
 
 This help page shows examples of how all the functions work, for a more in-depth help page, please refer to [https://github.com/WhenLifeHandsYouLemons/extramaths/wiki/Help](https://github.com/WhenLifeHandsYouLemons/extramaths/wiki/Help "Help page").
