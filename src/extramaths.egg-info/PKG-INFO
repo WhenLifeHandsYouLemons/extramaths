@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: extramaths
+Version: 0.1.1
+Summary: A Python package that simplifies equations.
+Author-email: Sooraj Sannabhadti <developer.soorajs@gmail.com>
+Project-URL: Homepage, https://github.com/WhenLifeHandsYouLemons/extramaths
+Project-URL: Bug Tracker, https://github.com/WhenLifeHandsYouLemons/extramaths/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.TXT
+
 # extramaths 0.1.1
 
 A Python package that simplifies equations. Right now it only does quadratics and 2D shape areas, soon I'll add more.
