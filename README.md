@@ -1,6 +1,6 @@
-# extramaths 0.1.1
+# extramaths
 
-A Python package that simplifies equations. Right now it only does quadratics and 2D shape areas, soon I'll add more.
+A Python package that simplifies calculations.
 
 Go to [https://pypi.org/project/extramaths/](https://pypi.org/project/extramaths/ "Download page") to install the package.
 
@@ -13,11 +13,11 @@ This help page shows examples of how all the functions work, for a more in-depth
 ### For Quadratics
 
 ```python
-from extramaths import quadsolver
+from extramaths import others
 ```
 
 ```python
-value1, value2 = quadsolver.quadraticsolver(a, b, c)
+value1, value2 = other.quadratic(a, b, c)
 
 print(value1)
 print(value2)
@@ -26,13 +26,13 @@ print(value2)
 ### For Areas of 2D Shapes
 
 ```python
-from extramaths import areasolver
+from extramaths import area
 ```
 
 #### Square
 
 ```python
-area_of_square = areasolver.area_square(length)
+area_of_square = area.square(length)
 
 print(area_of_square)
 ```
@@ -40,7 +40,7 @@ print(area_of_square)
 #### Rectangle
 
 ```python
-area_of_rectangle = areasolver.area_rect(height, width)
+area_of_rectangle = area.rectangle(height, width)
 
 print(area_of_rectangle)
 ```
@@ -48,7 +48,7 @@ print(area_of_rectangle)
 #### Right-Angled Triangle
 
 ```python
-area_of_right_angled_triangle = areasolver.area_right_angle_tri(base, height)
+area_of_right_angled_triangle = area.right_angle_triangle(base, height)
 
 print(area_of_right_angled_triangle)
 ```
@@ -56,7 +56,7 @@ print(area_of_right_angled_triangle)
 #### Non Right-Angled Triangle
 
 ```python
-area_of_non_right_angled_triangle = areasolver.area_non_right_angle_tri(a, b, C)
+area_of_non_right_angled_triangle = area.triangle(a, b, C)
 
 print(area_of_non_right_angled_triangle)
 ```
@@ -64,7 +64,7 @@ print(area_of_non_right_angled_triangle)
 #### Rhombus
 
 ```python
-area_of_rhombus = areasolver.area_rhombus(D, d)
+area_of_rhombus = area.rhombus(D, d)
 
 print(area_of_rhombus)
 ```
@@ -72,7 +72,7 @@ print(area_of_rhombus)
 #### Trapezoid
 
 ```python
-area_of_trapezoid = areasolver.area_trapezoid(a, b, height)
+area_of_trapezoid = area.trapezoid(a, b, height)
 
 print(area_of_trapezoid)
 ```
@@ -80,7 +80,7 @@ print(area_of_trapezoid)
 #### Circle
 
 ```python
-area_of_circle = areasolver.area_circle(r)
+area_of_circle = area.circle(r)
 
 print(area_of_circle)
 ```

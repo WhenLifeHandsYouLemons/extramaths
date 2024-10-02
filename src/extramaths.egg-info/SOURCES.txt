@@ -2,11 +2,10 @@ LICENSE.TXT
 README.md
 pyproject.toml
 src/extramaths/__init__.py
-src/extramaths/area_solver.py
-src/extramaths/fibonacci_solver.py
-src/extramaths/quad_solver.py
-src/extramaths/trigsolver_in-progress.py
-src/extramaths/volume_solver.py
+src/extramaths/area.py
+src/extramaths/matrix.py
+src/extramaths/others.py
+src/extramaths/volume.py
 src/extramaths.egg-info/PKG-INFO
 src/extramaths.egg-info/SOURCES.txt
 src/extramaths.egg-info/dependency_links.txt

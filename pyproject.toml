@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "extramaths"
-version = "0.1.1"
+version = "0.2.0"
 authors = [
   { name="Sooraj Sannabhadti", email="developer.soorajs@gmail.com" },
 ]
-description = "A Python package that simplifies equations."
+description = "A Python package that simplifies calculations."
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
