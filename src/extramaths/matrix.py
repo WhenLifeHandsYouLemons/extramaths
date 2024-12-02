@@ -2,11 +2,26 @@ def ref_matrix(matrix: list) -> list:
     """Converts a given matrix into it's row echelon form.
 
     Args:
-        matrix (list): The matrix to convert.
+        matrix (list): The matrix to convert. Each item of the list should be a column of the matrix.
 
     Returns:
-        list: The converted matrix.
+        list: The converted matrix. Each item of the list is a column of the matrix.
+
+    Raises:
+        TypeError: If the matrix is not a list, or the matrix is not a 2D list.
+        ValueError: If all rows of the matrix do not have the same length, or the matrix is empty.
     """
+
+    if type(matrix) is not list:
+        raise TypeError("Matrix must be a list.")
+    elif type(matrix[0]) is not list:
+        raise TypeError("Matrix must be a 2D list.")
+    elif len(matrix) == 0:
+        raise ValueError("Matrix must not be empty.")
+    else:
+        for row in matrix:
+            if len(row) != len(matrix[0]):
+                raise ValueError("All rows of the matrix must have the same length.")
 
     reduced_matrix = matrix
 
@@ -51,15 +66,36 @@ def ref_matrix(matrix: list) -> list:
 
     return reduced_matrix
 
+# TODO
+def rref_matrix(matrix: list) -> list:
+    reduced_matrix = ref_matrix(matrix)
+
+    return reduced_matrix
+
 def organise_matrix(matrix: list) -> list:
-    """Organises the matrix to have the left-most non-zero values be at the bottom.
+    """Organises the matrix to have the left-most non-zero values be at the top.
 
     Args:
-        matrix (list): The matrix to organise.
+        matrix (list): The matrix to organise. Each item of the list should be a column of the matrix.
 
     Returns:
         list: The organised matrix.
+
+    Raises:
+        TypeError: If the matrix is not a list, or the matrix is not a 2D list.
+        ValueError: If all rows of the matrix do not have the same length, or the matrix is empty.
     """
+
+    if type(matrix) is not list:
+        raise TypeError("Matrix must be a list.")
+    elif type(matrix[0]) is not list:
+        raise TypeError("Matrix must be a 2D list.")
+    elif len(matrix) == 0:
+        raise ValueError("Matrix must not be empty.")
+    else:
+        for row in matrix:
+            if len(row) != len(matrix[0]):
+                raise ValueError("All rows of the matrix must have the same length.")
 
     # Go through all rows of the matrix
     row_no = 0
@@ -86,3 +122,86 @@ def organise_matrix(matrix: list) -> list:
         row_no += 1
 
     return matrix
+
+def matrix_vector_multiply(matrix: list, vector: list) -> list:
+    """Multiplies a matrix by a vector.
+
+    Args:
+        matrix (list): The matrix to multiply. Each item of the list should be a column of the matrix.
+        vector (list): The vector to multiply. Each item of the list should be a row of the vector.
+
+    Returns:
+        list: The resulting vector.
+
+    Raises:
+        TypeError: If the matrix is not a list, the vector is not a list, the matrix is not a 2D list, or the vector is not a 1D list.
+        ValueError: If the matrix is empty, the vector is empty, or the matrix and vector do not have the same length.
+    """
+
+    if type(matrix) is not list:
+        raise TypeError("Matrix must be a list.")
+    elif type(vector) is not list:
+        raise TypeError("Vector must be a list.")
+    elif type(matrix[0]) is not list:
+        raise TypeError("Matrix must be a 2D list.")
+    elif type(vector[0]) is list:
+        raise TypeError("Vector must be a 1D list. (Use the vector_multiply function for matrix-matrix multiplication.)")
+    elif len(matrix) == 0:
+        raise ValueError("Matrix must not be empty.")
+    elif len(vector) == 0:
+        raise ValueError("Vector must not be empty.")
+    elif len(matrix[0]) != len(vector):
+        raise ValueError("Matrix and vector must have the same length.")
+
+    result = []
+
+    for row in matrix:
+        sum = 0
+        for i in range(len(row)):
+            sum += row[i] * vector[i]
+        result.append(sum)
+
+    return result
+
+def matrix_multiply(matrix1: list, matrix2: list) -> list:
+    """Multiplies two matrices.
+
+    Args:
+        matrix1 (list): The first matrix to multiply. Each item of the list should be a column of the matrix.
+        matrix2 (list): The second matrix to multiply. Each item of the list should be a column of the matrix.
+
+    Returns:
+        list: The resulting matrix.
+
+    Raises:
+        TypeError: If `matrix1` is not a list, `matrix2` is not a list, `matrix1` is not a 2D list, or `matrix2` is not a 2D list.
+        ValueError: If `matrix1` is empty, `matrix2` is empty, `matrix1` and `matrix2` do not have the same number of columns as rows, or `matrix2` is empty.
+    """
+
+    if type(matrix1) is not list:
+        raise TypeError("Matrix 1 must be a list.")
+    elif type(matrix2) is not list:
+        raise TypeError("Matrix 2 must be a list.")
+    elif len(matrix1) == 0:
+        raise ValueError("Matrix 1 must not be empty.")
+    elif len(matrix2) == 0:
+        raise ValueError("Matrix 2 must not be empty.")
+    elif len(matrix1[0]) != len(matrix2):
+        raise ValueError("Matrix 1 must have the same number of columns as rows in matrix 2.")
+    elif type(matrix1[0]) is not list:
+        raise TypeError("Matrix 1 must be a 2D list.")
+    elif type(matrix2[0]) is not list:
+        raise TypeError("Matrix 2 must be a 2D list.")
+
+    result = []
+
+    for row in matrix1:
+        temp_array = []
+        for i in range(len(matrix2[0])):
+            sum = 0
+            for j in range(len(row)):
+                sum += row[j] * matrix2[j][i]
+            temp_array.append(sum)
+        result.append(temp_array)
+
+    return result

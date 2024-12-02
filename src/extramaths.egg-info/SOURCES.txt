@@ -5,6 +5,7 @@ src/extramaths/__init__.py
 src/extramaths/area.py
 src/extramaths/matrix.py
 src/extramaths/others.py
+src/extramaths/vector.py
 src/extramaths/volume.py
 src/extramaths.egg-info/PKG-INFO
 src/extramaths.egg-info/SOURCES.txt
